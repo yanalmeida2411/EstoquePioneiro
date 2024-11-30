@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+}
+
+.headerContent{
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.headerContent h1{
+    font-size: 50px;
+    font-family: "Freckle Face", system-ui;
+    text-shadow: 1px 1px black;
+}
+.menuContent{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 30%;
+    font-size: 25px;
+    font-family: "Freckle Face", system-ui;
+    text-shadow: 1px 0px black;
+    background-color: #382a97;
+    padding: 10px 60px;
+    border-radius: 10px;
+}
+
+.menuContent a{
+    color: white;
+}
+.menuContent a:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.307);
+}
+.menuContent a:active{
+    scale: 0.90;
+}
+.carContent{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 200px;
+    color: white;
+    text-transform: uppercase;
+    font-size:22px;
+    font-family: "Freckle Face", system-ui;
+    transition: all 0.2 ease-in-out;
+    background-color: #382a97;
+
+}
+
+.carContent:hover{
+    background-color: #00000052;
+    color: black;
+    cursor: pointer;
+}
+.carContent:active{
+    scale: 0.95;
+}
+
+.shoppingCart{
+    position: fixed;
+    height: 80vh;
+    background-color: #382a97;
+    width: 30%;
+    right: 0;
+    z-index: 2;
+    opacity: 1;
+    padding:20px;
+    border-radius: 10%;
+    top: 10%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.productsList{
+    display: flex;
+    background-color: white;
+    list-style: none;
+    font-size: 20px;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding: 5px;
+    align-items: center;
+    height: 10vh;
+    border-radius: 10px;
+    width: 98%;
+}
+
+.finalizarCompra{
+    position:absolute;
+    top: 84%;
+    left: 25%;
+}
+.btnFinalizarCompra{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 300px;
+    color: black;
+    text-transform: uppercase;
+    font-size:22px;
+    padding: 5px 50px;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    font-family: "Freckle Face", system-ui;
+    transition: all 0.2 ease-in-out;
+
+}
+
+.btnFinalizarCompra:hover{
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    cursor: pointer;
+}
+
+.productsList{
+    font-size: 25px;
+    font-family: "Freckle Face", system-ui;
+    display: flex;
+    justify-content:space-around;
+    height:10%;
+}
+
+.totalContent{
+    color: white;
+    font-size: 30px;
+    font-family: "Freckle Face", system-ui;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.removerItem{
+    border: none;
+    padding: 5px 10px;
+    border-radius:100px;
+    background-color: red;
+    color: white;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    font-family: "Freckle Face", system-ui;
+    
+}
+
+.removerItem:hover{
+
+    cursor: pointer;
+    background-color: rgb(110, 3, 3);
+
+}
+
+.removerItem:active{
+    scale: 0.9;
+}
+
+.itemAdd{
+    background-color: green;
+    width: 12%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 15vh;
+    left: 2vw;
+    z-index: 2;
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+    animation: mostrarItemStatus 1s linear;
+    font-family: "Freckle Face", system-ui;
+
+}
+
+.itemRemoved{
+    background-color: red;
+    width: 12%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 15vh;
+    left: 2vw;
+    z-index: 2;
+    font-size: 20px;
+    transition: all 1s ease-in-out;
+    animation: mostrarItemStatus 1s linear;
+    font-family: "Freckle Face", system-ui;
+}
+
+@keyframes mostrarItemStatus {
+    0%{
+        opacity: 0;
+    }
+   50%{
+    opacity: 1;
+   }
+   100%{
+    opacity: 0;
+   }
+}
+
+.qtdItems{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    border-radius: 100%;
+    background-color:rgb(255, 255, 255);
+    width: 2%;
+    padding: 5px;
+    top: 2%;
+    color: black;
+    border:4px solid black;
+
+}
+

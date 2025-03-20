@@ -1,1 +1,1 @@
-x
+Bem-vindo à pasta de projetos autorais ! Aqui estão armazenados os códigos de diversos sistemas em desenvolvimento/prontos. Cada projeto reflete aprendizado, inovação e a busca por soluções eficientes para diferentes desafios tecnológicos.

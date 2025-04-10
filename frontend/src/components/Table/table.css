@@ -18,7 +18,7 @@ body{
 }
 .allContentTable{
     width: 65vw;
-    height: 94.7vh;
+    height: 93.2vh;
     background-image: url(../../../produtosFundo.png);
     background-size: contain;
     border: 2px solid black;
@@ -187,7 +187,6 @@ nav{
     background-color: rgba(255, 0, 0, 0.87);
     border-radius: 50px;
     opacity: 0.8;
-
 }
 
 .removeProduct:hover{

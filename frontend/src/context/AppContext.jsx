@@ -14,6 +14,8 @@ function AppContextProvider({ children }) {
   const [quantity, setQuantity] = useState("");
   const [type, setType] = useState("");
 
+  const [mostrarQRCode, setMostrarQRCode] = useState(false);
+
   const totalQuantity = cart.reduce((acc, product) => {
     return acc + product.quantidade_product * product.valor_product;
   }, 0);
@@ -27,7 +29,8 @@ function AppContextProvider({ children }) {
 
     const response = await axios.put(`http://localhost:5172/${id}`, {
       name_product: productInStock.name_product,
-      quantidade_product: productInStock.quantidade_product - quantidadeComprada,
+      quantidade_product:
+        productInStock.quantidade_product - quantidadeComprada,
       valor_product: productInStock.valor_product,
       tipo_product: productInStock.tipo_product,
     });
@@ -48,7 +51,7 @@ function AppContextProvider({ children }) {
       const findItem = filter.find(
         (product) => product.id_product === item.id_product
       );
-      if (findItem) {   
+      if (findItem) {
         const update = updateStock(item.id_product, item.quantidade_product);
         return update;
       } else {
@@ -56,7 +59,7 @@ function AppContextProvider({ children }) {
       }
     });
     setCart([]);
-    console.log(products)
+    setMostrarQRCode(true);
   };
 
   return (
@@ -82,6 +85,8 @@ function AppContextProvider({ children }) {
         setType,
         updateStock,
         orderComplete,
+        mostrarQRCode,
+        setMostrarQRCode,
       }}
     >
       {children}

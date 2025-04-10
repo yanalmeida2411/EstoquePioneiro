@@ -13,10 +13,7 @@ const Table = () => {
     cart,
     setCart,
     showRegister,
-    setShowRegister,
     showComponent,
-    updateStock,
-    orderCompleted,
   } = useContext(AppContextContext);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");

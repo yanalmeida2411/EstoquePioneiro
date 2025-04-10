@@ -7,11 +7,7 @@ const ShoppingCart = () => {
     cart,
     setCart,
     totalQuantity,
-    products,
-    setProducts,
     filter,
-    setFilter,
-    updateStock,
     orderComplete,
   } = useContext(AppContextContext);
 
